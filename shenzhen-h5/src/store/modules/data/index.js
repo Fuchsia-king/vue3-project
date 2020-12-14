@@ -41,9 +41,9 @@ export default {
           newsContent: data.newses.slice(0, 3),
           timeLineContent: data.newses.slice(3),
         },
-        // 重磅嘉宾
+        // 历届嘉宾
         importantGuests: {
-          title: "重磅嘉宾",
+          title: "历届嘉宾",
           des: "Guest",
           guestsData: data.customs.map((item) => {
             return {
@@ -86,7 +86,7 @@ export default {
   actions: {
     async getAllData({ commit }) {
       const res = await axios.get(
-        "http://localhost:8081/local_api/api/forum?code=zcgl"
+        "http://pre.ryx365.com:9091/api/forum?code=gyljr"
       );
       commit("setAllDataInfo", res.data.data);
       return res;
